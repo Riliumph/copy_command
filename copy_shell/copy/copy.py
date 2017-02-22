@@ -4,7 +4,7 @@ import os
 # import os.path     # must write [os.path.xxxx]
 from os import path  # can omit [os] => [path.xxx] is OK
 import shutil
-import sys
+from sys import stdout
 
 
 def create_parser():
@@ -23,7 +23,7 @@ def create_parser():
 def print_progress(now_count, max_count):
     percentage = now_count / max_count * 100
     descriptor = "\r{0:.1f}%({1} of {2}) : [{3:<10}]"
-    sys.stdout.write(descriptor.format(percentage, now_count, max_count, "#" * (now_count % 10)))
+    stdout.write(descriptor.format(percentage, now_count, max_count, "#" * (now_count % 10)))
 
 
 if __name__ == '__main__':
@@ -36,7 +36,7 @@ if __name__ == '__main__':
         os.mkdir(args.output_dir)
     # Check not exist element
     if any(not path.exists(path) for path in path_list):
-        not_exist = list(filter(path.exists, path_list))
+        not_exist = list(filter(lambda x: not path.exists(x), path_list))
         path_list = list(set(path_list) - set(not_exist))
         print("Not exist: ", not_exist)
         print()
