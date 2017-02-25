@@ -10,7 +10,7 @@
     <Name>copy_shell</Name>
     <ClrVersion />
     <PowerShellHostVersion />
-    <PowerShellVersion>v2</PowerShellVersion>
+    <PowerShellVersion>v4</PowerShellVersion>
     <ProcessorArchitecture />
     <RequiredModules />
     <DebugArguments>-copy_list "D:\Documents\PycharmProjects\filecopy\copy_shell\copy_shell\input.txt" -destination "D:\Documents\PycharmProjects\filecopy\copy_shell\copy_shell\bin\Debug"</DebugArguments>
