@@ -54,8 +54,9 @@ if __name__ == '__main__':
         os.sys.exit(0)
 
     # Copy Loop
-    for i in range(0, len(path_list)):
-        file_path = path_list[i]
+    for i, copy_obj in enumerate(path_list):
+        print("\rcopy", copy_obj, " ...")
+        print_progress(i, len(path_list))
         try:
             if os.path.isfile(file_path):
                 shutil.copy(file_path, args.output_dir)
@@ -63,3 +64,4 @@ if __name__ == '__main__':
                 shutil.copytree(fike_path, args.output_dir)
         finally:
             print_progress(i + 1, len(path_list))
+    print("ALL IS DONE!!")
