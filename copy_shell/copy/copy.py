@@ -6,7 +6,7 @@ import sys
 
 
 def create_parser():
-    usage = 'Usage: python {} FILE [input_file <file>] [out_dir <string>] [--skip] [--help]'.format(__file__)
+    usage = 'Usage: python {} FILE [input_file <file>] [out_dir <string>] [--skip] [--try] [--help]'.format(__file__)
     parser = argparse.ArgumentParser(usage=usage)
     parser.add_argument(nargs=None, type=str, dest='input_file', help='input data file path')
     parser.add_argument(nargs=None, type=str, dest='output_dir', help='output directory path')
@@ -15,6 +15,11 @@ def create_parser():
                         default=False,
                         dest="skip_overlap",
                         help='skip instead of over writing')
+    parser.add_argument("-t", "--try",
+                        action="store_true",
+                        default=False,
+                        dest='try_mode',
+                        help='only check action')
     return parser.parse_args()
 
 
@@ -45,6 +50,9 @@ if __name__ == '__main__':
         path_list = list(set(path_list) - set(overlap_list))
         print("skipping: ", overlap_list)
         print()
+    if args.try_mode:
+        os.sys.exit(0)
+
     # Copy Loop
     for i in range(0, len(path_list)):
         file_path = path_list[i]
