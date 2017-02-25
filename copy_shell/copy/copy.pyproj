@@ -13,8 +13,13 @@
     <Name>copy</Name>
     <RootNamespace>copy</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
-    <InterpreterId>{dc687cc7-51ef-48a8-91e1-80f4c284c30c}</InterpreterId>
+    <InterpreterId>{912d9768-9f05-47b9-ac15-56f89f7abd06}</InterpreterId>
     <InterpreterVersion>3.5</InterpreterVersion>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>./input.txt D:\Documents\PycharmProjects\filecopy\copy_shell\bin\Debug</CommandLineArguments>
+    <InterpreterArguments>
+    </InterpreterArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,6 +33,7 @@
     <Compile Include="copy.py" />
   </ItemGroup>
   <ItemGroup>
+    <InterpreterReference Include="{912d9768-9f05-47b9-ac15-56f89f7abd06}\3.5" />
     <InterpreterReference Include="{dc687cc7-51ef-48a8-91e1-80f4c284c30c}\3.5" />
   </ItemGroup>
   <PropertyGroup>
