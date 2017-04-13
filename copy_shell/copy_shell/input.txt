@@ -1,0 +1,7 @@
+D:\Documents\hgignore_global.txt
+D:\Documents\password-export-2016-10-11.xml
+D:\Documents\reflection.txt
+D:\Documents\無題3.txt
+D:\Documents\ubuntuの無限ログイン地獄.txt
+D:\Documents\無題1.txt
+D:\Documents\無題2.txt
